@@ -52,7 +52,7 @@ class DeckTest {
 
 	    // Count occurrences of each card
 	    while (deck.size() > 0) {
-	        Card drawnCard = deck.drawCard();
+	        Card drawnCard = deck.takeOutCard();
 	        String cardKey = drawnCard.toString();
 	        cardCount.put(cardKey, cardCount.get(cardKey) + 1);
 	    }
@@ -71,23 +71,23 @@ class DeckTest {
 		Deck testDeck = new Deck(1);
 		deck.shuffle();
 		testDeck.shuffle();
-		assertNotEquals(deck.drawCard(), testDeck.drawCard(),
+		assertNotEquals(deck.takeOutCard(), testDeck.takeOutCard(),
 				"Shuffled decks should not be in the same order");
 	}
 
 	/**
-	 * Test method for {@link model.Deck#drawCard()}.
+	 * Test method for {@link model.Deck#takeOutCard()}.
 	 */
 	@Test
-	void testDrawCard() {
+	void testTakeOutCard() {
 		int counter = 0;
 		for (int i=0; i < 52; i++) {
-			deck.drawCard();
+			deck.takeOutCard();
 			counter++;
 		}
 		assertEquals(52, counter, "The deck should be empty after 52 cards drawed");
 		Exception exception =
-				assertThrows(IllegalStateException.class, () -> deck.drawCard());
+				assertThrows(IllegalStateException.class, () -> deck.takeOutCard());
 				assertEquals(exception.getMessage(), "The deck is empty!");
 	}
 

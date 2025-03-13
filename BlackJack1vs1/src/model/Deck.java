@@ -42,11 +42,11 @@ public class Deck {
 	 * @return the draw card 
 	 * @throws IllegalStateException if the deck is empty*/
 	
-	public Card drawCard() {
+	public Card takeOutCard() {
 		if (cards.isEmpty()) {
 			throw new IllegalStateException("The deck is empty!");
-			/*TODO gestire errore (non dovrei mai arrivare ad avere il mazzo vuoto
-			 * perchè a metà mazzo lo ricreo) e creare nuovo mazzo in automatico (???)*/
+			/* non dovrei mai arrivare ad avere il mazzo vuoto
+			 * perchè a metà mazzo lo ricreo*/
 		}
 		return cards.remove(0);
 	}
