@@ -42,7 +42,7 @@ public class Player {
 		/*Correct Ace's point: default they count 11
 		 *  but when the score is over 21, they count 1*/
 		while (score > 21 && aceCount > 0) {
-			score = -10;
+			score -= 10;
 			aceCount--;
 		}
 		
