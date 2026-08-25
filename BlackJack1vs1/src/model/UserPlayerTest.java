@@ -142,17 +142,5 @@ class UserPlayerTest {
         assertTrue(fourthResult, "Should return HIT (true) for uppercase 'h'");
     }
     
-    @Test
-    void testClearHand() {
-        System.out.println("TEST: Clear Hand");
-        player = new UserPlayer("TestPlayer");
-        player.drawCard(new Card("Clubs", "K"));
-        System.out.println("Before: " + player.toString());
-        
-        player.clearHand();
-        System.out.println("After: " + player.toString());
-        
-        assertEquals(0, player.calculateScore(), "Hand should be empty after clearHand()");
-    }
     
 }

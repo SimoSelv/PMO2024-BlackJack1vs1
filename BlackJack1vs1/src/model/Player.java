@@ -25,6 +25,13 @@ public class Player {
 	}
 	
 	/**
+     * Clears the cards in the player's hand for a new round.
+     */
+    public void clearHand() {
+        this.hand.clear();
+    }
+	
+	/**
 	 * Calculates the total score of the player's hand
 	 * @return The total score
 	 * */

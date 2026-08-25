@@ -46,12 +46,6 @@ public class UserPlayer extends Player {
         }
     }
 
-    /**
-     * Clears the cards in the player's hand for a new round.
-     */
-    public void clearHand() {
-        this.hand.clear();
-    }
     
     @Override
     public String toString() {
