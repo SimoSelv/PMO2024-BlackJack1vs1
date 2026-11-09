@@ -57,6 +57,15 @@ public class Player {
 		
 	}
 	
+	/**
+	 * Shows final score
+	 * @return String with player's name, score and hand*/
+	
+	@Override
+    public String toString() {
+        return name + ", score = " + calculateScore() + ", hand = " + hand ;
+    }
+	
 	
 	
 }

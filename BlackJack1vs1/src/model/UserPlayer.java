@@ -46,9 +46,4 @@ public class UserPlayer extends Player {
         }
     }
 
-    
-    @Override
-    public String toString() {
-        return name + ", score = " + calculateScore() + ", hand = " + hand ;
-    }
 }

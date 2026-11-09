@@ -71,8 +71,8 @@ public class Game {
         dealer.drawCard(deck.takeOutCard());
 
         System.out.println("Cards dealt.");
-        System.out.println("Player's hand: " + player.calculateScore() + " " + player.toString());
-        // In Blackjack, one dealer card is usually hidden, but here we show the initial state
+        System.out.println("Player's hand: " + player.toString());
+        
     }
 
     /**
